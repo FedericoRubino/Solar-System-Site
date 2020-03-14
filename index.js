@@ -4,9 +4,11 @@
 	3. Tell NodeJS to use the ejs as page 
 */
 
+
 var express = require("express");
 var bodyParser = require("body-parser")
 var app = express();
+app.use(express.static("public"));
 
 app.set('view engine', 'ejs');
 app.use(express.static("css"));
@@ -17,13 +19,24 @@ app.get("/", function(req, res){
 });
 
 app.get("/mercury", function(req,res){
+	res.render("mercury.ejs");
+
 	res.send("this will be the mercury web page");
 })
 
 
 app.get("/venus", function(req,res){
+	res.render("venus.ejs");
+	
 	res.send("this will be the Venus web page");
 })
+
+app.get("/earth", function(req,res){
+	res.render("earth.ejs");
+	
+	res.send("this will be the Earth web page");
+})
+
 
 app.get("/*", function(req, res){
 	res.render("error.ejs");
