@@ -15,31 +15,31 @@ app.use(express.static("css"));
 app.use(bodyParser.urlencoded({extended:true}));
 
 app.get("/", function(req, res){
-	res.render("home.ejs");
+	res.render("home");
 });
 
 app.get("/mercury", function(req,res){
-	res.render("mercury.ejs");
+	res.render("mercury");
 
 	res.send("this will be the mercury web page");
 })
 
 
 app.get("/venus", function(req,res){
-	res.render("venus.ejs");
+	res.render("venus");
 	
 	res.send("this will be the Venus web page");
 })
 
 app.get("/earth", function(req,res){
-	res.render("earth.ejs");
+	res.render("earth");
 	
 	res.send("this will be the Earth web page");
 })
 
 
 app.get("/*", function(req, res){
-	res.render("error.ejs");
+	res.render("error");
 });
 
 //3000 is for localhost and 8080 is for heroku
