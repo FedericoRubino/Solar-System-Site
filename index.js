@@ -22,20 +22,20 @@ app.get("/mercury", function(req,res){
 	res.render("mercury");
 
 	res.send("this will be the mercury web page");
-})
+});
 
 
 app.get("/venus", function(req,res){
 	res.render("venus");
 	
 	res.send("this will be the Venus web page");
-})
+});
 
 app.get("/earth", function(req,res){
 	res.render("earth");
 	
 	res.send("this will be the Earth web page");
-})
+});
 
 
 app.get("/*", function(req, res){
