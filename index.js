@@ -47,18 +47,3 @@ app.listen(process.env.PORT || 3000, function(){
 	console.log("Server is running...");
 });
 
-// var friendlist = ["Alice", "Clark", "Bellamy", "Octavia"];
-
-// app.get("/friends", function(req, res){
-// 	// this sends to friends.ejs
-// 	res.render("friends", {friends: friendlist});
-
-// });
-
-// // the form method is post so we need to call app.post
-// app.post("/addfriends", function(req, res){
-// 	// console.log(req.body);
-// 	var newFriend = req.body.newfriend;
-// 	friendlist.push(newFriend);
-// 	res.redirect("/friends");
-// });
