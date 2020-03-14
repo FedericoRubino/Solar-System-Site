@@ -3,7 +3,7 @@
 	2. NodeJS looks into a folder "views" to render a Page
 	3. Tell NodeJS to use the ejs as page 
 */
-
+//Lab 06
 
 var express = require("express");
 var bodyParser = require("body-parser");
