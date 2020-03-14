@@ -15,7 +15,9 @@ app.use(express.static("css"));
 app.use(bodyParser.urlencoded({extended:true}));
 
 app.get("/", function(req, res){
-	res.render("home");
+	res.render("venus");
+	
+	// res.render("home");
 });
 
 app.get("/mercury", function(req,res){
@@ -43,7 +45,7 @@ app.get("/*", function(req, res){
 });
 
 //3000 is for localhost and 8080 is for heroku
-app.listen(process.env.PORT, process.env.IP || 3000, function(){
+app.listen(process.env.PORT|| 3000, function(){
 	console.log("Server is running...");
 });
 
